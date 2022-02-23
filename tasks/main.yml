@@ -1,0 +1,16 @@
+---
+# tasks file for ansible-role-nfsserver
+- name: NFS Server
+  tags:
+    - nfs
+    - nfsserver
+  block:
+    - include: set-facts.yml
+
+    - include: debian.yml
+      when: ansible_os_family == "Debian"
+
+    - include: redhat.yml
+      when: ansible_os_family == "RedHat"
+
+    - include: config.yml
