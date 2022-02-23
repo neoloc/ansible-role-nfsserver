@@ -1,11 +1,10 @@
 galaxy_info:
-  author: Larry Smith Jr.
+  namespace: neoloc
+  role_name: nfsserver
+  author: neoloc
   description: An [Ansible](https://www.ansible.com) role to install/configure an NFS Server
-
   license: MIT
-
-  min_ansible_version: 1.2
-
+  min_ansible_version: 2.9.0
   platforms:
     - name: Debian
       versions:
@@ -16,8 +15,6 @@ galaxy_info:
     - name: Ubuntu
       versions:
         - all
-
   galaxy_tags:
     - system
-
 dependencies: []
