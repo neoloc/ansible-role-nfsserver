@@ -1,6 +1,7 @@
 ---
 # tasks file for ansible-role-nfsserver
 - name: NFS Server
+  when: nfs_server_configure == true
   tags:
     - nfs
     - nfsserver
